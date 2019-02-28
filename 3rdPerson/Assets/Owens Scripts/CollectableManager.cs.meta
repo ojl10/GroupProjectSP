@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a5b42586003271c429e4fd20fc9301ea
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - DylansCollectables: {fileID: 11400000, guid: 1d476716089de5e4695f16b82212a39b,
+      type: 2}
+  - OwensCollectables: {fileID: 11400000, guid: 1c9b4f1831b5a4c4bb3130530ae3cde7,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

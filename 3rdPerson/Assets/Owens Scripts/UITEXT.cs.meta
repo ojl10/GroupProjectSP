@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 2bf41683171f7734bb99ddcb65bde672
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Health: {instanceID: 0}
+  - OCollectable: {instanceID: 0}
+  - DCollectable: {instanceID: 0}
+  - playerHealth: {fileID: 11400000, guid: 33b45c6212e5d2f4581b8bdf046d63b4, type: 2}
+  - DylanCollectable: {fileID: 11400000, guid: 1d476716089de5e4695f16b82212a39b, type: 2}
+  - OwenCollectable: {fileID: 11400000, guid: 1c9b4f1831b5a4c4bb3130530ae3cde7, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
