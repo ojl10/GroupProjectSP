@@ -5,11 +5,12 @@ OcclusionCullingSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_OcclusionBakeSettings:
-    smallestOccluder: 5
+    smallestOccluder: 2
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: bca29d0ef2d249b4b9feb7786847e952
+  m_OcclusionCullingData: {fileID: 36300000, guid: 3bc424bd09213cd4084d820ee41c426e,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -6578,12 +6579,12 @@ MonoBehaviour:
   position:
     targetPosOffest: {x: 0, y: 2, z: 0}
     lookSmooth: 300
-    distanceFromTarget: -8
+    distanceFromTarget: -6
     zoomSpeed: 500
     maxZoom: -2
     minZoom: -15
     hideThreshold: 1
-    smoothFollow: 1
+    smoothFollow: 0
     smooth: 0.05
     adjustedDistance: 0
   orbit:

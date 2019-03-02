@@ -87,7 +87,6 @@
     <Compile Include="Assets\3D Adventure Game Kit\Modular Character\Scripts\Movement.cs" />
     <Compile Include="Assets\3D Adventure Game Kit\Modular Character\Scripts\MultiJump.cs" />
     <Compile Include="Assets\3D Adventure Game Kit\Modular Character\Scripts\PlayerHealth.cs" />
-    <Compile Include="Assets\CharacterController.cs" />
     <Compile Include="Assets\LowPoly\Low Poly Modular Terrain Pack\Bonus_Assets\Scripts\ModularTerrainCameraControl.cs" />
     <Compile Include="Assets\LowPoly\Low Poly Modular Terrain Pack\Bonus_Assets\Scripts\ModularTerrainCloudsControl.cs" />
     <Compile Include="Assets\LowPoly\Low Poly Modular Terrain Pack\Bonus_Assets\Scripts\ModularTerrainSunControl.cs" />
@@ -101,7 +100,7 @@
     <Compile Include="Assets\LowPoly\Low Poly Vegetation Pack\Bonus Assets\Scripts\LowPolyVegetation_CameraControl.cs" />
     <Compile Include="Assets\LowPoly\Low Poly Vegetation Pack\Bonus Assets\Scripts\LowPolyVegetation_CloudsControl.cs" />
     <Compile Include="Assets\LowPoly\Low Poly Vegetation Pack\Bonus Assets\Scripts\LowPolyVegetation_SunControl.cs" />
-    <Compile Include="Assets\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
+    <Compile Include="Assets\LowPoly\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
     <Compile Include="Assets\Owens Scripts\AddScore.cs" />
     <Compile Include="Assets\Owens Scripts\CollectableManager.cs" />
     <Compile Include="Assets\Owens Scripts\damageOnTouch.cs" />
@@ -118,7 +117,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
-    <None Include="Assets\LowPolyWater_Pack\LowPoly Island\Credits.txt" />
+    <None Include="Assets\LowPoly\LowPolyWater_Pack\LowPoly Island\Credits.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\3D Adventure Game Kit\Assets\Shader\Diffuse Transparency.shader" />
@@ -128,7 +127,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\3D Adventure Game Kit\Documentation.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\LowPolyWater_Pack\Shaders\WaterShaded.shader" />
+    <None Include="Assets\LowPoly\LowPolyWater_Pack\Shaders\WaterShaded.shader" />
     <None Include="Assets\3D Adventure Game Kit\Assets\Shader\Diffuse Shake.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
