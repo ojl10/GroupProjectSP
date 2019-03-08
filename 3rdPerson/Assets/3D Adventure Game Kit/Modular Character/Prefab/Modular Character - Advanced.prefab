@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 9509644}
   - component: {fileID: 5492954}
   - component: {fileID: 13628748}
+  - component: {fileID: 3401208156041347181}
   - component: {fileID: 11423302}
   - component: {fileID: 11482758}
   - component: {fileID: 11445894}
@@ -120,6 +121,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &3401208156041347181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5b42586003271c429e4fd20fc9301ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DylansCollectables: {fileID: 11400000, guid: 1d476716089de5e4695f16b82212a39b, type: 2}
+  OwensCollectables: {fileID: 11400000, guid: 1c9b4f1831b5a4c4bb3130530ae3cde7, type: 2}
 --- !u!114 &11423302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +280,7 @@ MonoBehaviour:
   invincibility: 0
   respawnPoint: {x: 0, y: 0, z: 0}
   respawnRotation: {x: 0, y: 0, z: 0, w: 0}
+  playerLocation: {fileID: 0}
   text: {fileID: 0}
   hurtSfx: {fileID: 8300000, guid: 8aa0755dfcf0c8e40b72f51d81a2cc2a, type: 3}
 --- !u!114 &11452544
