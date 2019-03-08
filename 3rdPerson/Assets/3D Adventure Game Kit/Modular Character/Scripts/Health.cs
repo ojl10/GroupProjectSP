@@ -20,12 +20,20 @@ public class Health : AbstractBehaviour {
     [HideInInspector]public Vector3 respawnPoint; 
     [HideInInspector]public Quaternion respawnRotation;
 
+    //Owens Additions to the asset
+    Vector3 checkpoint;
+    public PosScriptable playerLocation;
+
     /// <summary>
     /// Start is used to set the initial location variables for respawning the characters.
     /// </summary>
     public virtual void Start()
     {
-        respawnPoint = transform.position;
+        respawnPoint.x = playerLocation.X;
+        respawnPoint.y = playerLocation.Y;
+        respawnPoint.z = playerLocation.Z;
+        transform.position = respawnPoint;
+        //respawnPoint = transform.position;
         respawnRotation = transform.rotation;
     }
 
@@ -97,6 +105,9 @@ public class Health : AbstractBehaviour {
     /// </summary>
     public virtual void Dead()
     {
+        respawnPoint.x = playerLocation.X;
+        respawnPoint.y = playerLocation.Y;
+        respawnPoint.z = playerLocation.Z;
         transform.position = respawnPoint;
         transform.rotation = respawnRotation;
         currentHealth = healthMax;
