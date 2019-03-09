@@ -20,7 +20,7 @@ public class Health : AbstractBehaviour {
     [HideInInspector]public Vector3 respawnPoint; 
     [HideInInspector]public Quaternion respawnRotation;
 
-    //Owens Additions to the asset
+    //Owens Additions to the asset (changed Current health to the scriptable object may need to revert if buggy)
     Vector3 checkpoint;
     public PosScriptable playerLocation;
     public intScriptable playerHealth;
