@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InteractingObject : MonoBehaviour
 {
+    public GameObject EnerguPull_FX;
     public intScriptable playerHealth;
     bool InBox = false;
     bool active = true;
@@ -16,6 +17,14 @@ public class InteractingObject : MonoBehaviour
             playerHealth.Value++;
             active = false;
         }   
+        if (!active)
+        {
+            EnerguPull_FX.SetActive(false);
+        }
+        else if (active)
+        {
+            EnerguPull_FX.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
