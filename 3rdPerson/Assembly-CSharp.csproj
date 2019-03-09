@@ -107,6 +107,8 @@
     <Compile Include="Assets\Owens Scripts\CollectableManager.cs" />
     <Compile Include="Assets\Owens Scripts\damageOnTouch.cs" />
     <Compile Include="Assets\Owens Scripts\DylansCollectable.cs" />
+    <Compile Include="Assets\Owens Scripts\Interact.cs" />
+    <Compile Include="Assets\Owens Scripts\InteractingObject.cs" />
     <Compile Include="Assets\Owens Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Owens Scripts\OwensCollectable.cs" />
     <Compile Include="Assets\Owens Scripts\ScriptableObjects\CheckpointUpdate.cs" />

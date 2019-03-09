@@ -6,8 +6,8 @@ using System.Collections;
 /// </summary>
 public class Health : AbstractBehaviour {
 
-    public int healthMax = 5;               //This variable is the maxiumum amount of health at one time.
-    public int currentHealth = 5;           //The current health the character has available.
+    public int healthMax = 3;               //This variable is the maxiumum amount of health at one time.
+    public int currentHealth = 3;           //The current health the character has available.
     public float invincibilityTime = 1f;   //The time the character has before being allowed to be damaged again.
    
     public bool knockbackOnDamage = true;           //Bool enables knockback when the character is damaged.
@@ -23,16 +23,17 @@ public class Health : AbstractBehaviour {
     //Owens Additions to the asset
     Vector3 checkpoint;
     public PosScriptable playerLocation;
+    public intScriptable playerHealth;
 
     /// <summary>
     /// Start is used to set the initial location variables for respawning the characters.
     /// </summary>
     public virtual void Start()
     {
-        respawnPoint.x = playerLocation.X;
-        respawnPoint.y = playerLocation.Y;
-        respawnPoint.z = playerLocation.Z;
-        transform.position = respawnPoint;
+        respawnPoint.x = playerLocation.X;//Owen
+        respawnPoint.y = playerLocation.Y;//Owen
+        respawnPoint.z = playerLocation.Z;//Owen
+        transform.position = respawnPoint;//Owen
         //respawnPoint = transform.position;
         respawnRotation = transform.rotation;
     }
@@ -48,7 +49,8 @@ public class Health : AbstractBehaviour {
             //Remove the value sent to the Damage from the ChangeHealth.
             ChangeHealth(-value);
             //Check if the current health is less than or equal to 0, if so kill the player.
-            if (currentHealth <= 0)
+            
+            if (playerHealth.Value <= 0)
             {
                 Dead();
             }
@@ -86,8 +88,8 @@ public class Health : AbstractBehaviour {
     /// </summary>
     public virtual void ChangeHealth(int value)
     {
-        currentHealth += value;
-        currentHealth = Mathf.Clamp(currentHealth, 0, healthMax);
+        playerHealth.Value += value;
+        playerHealth.Value = Mathf.Clamp(playerHealth.Value, 0, healthMax);
 
         VisualUpdate();
     }
@@ -105,12 +107,12 @@ public class Health : AbstractBehaviour {
     /// </summary>
     public virtual void Dead()
     {
-        respawnPoint.x = playerLocation.X;
-        respawnPoint.y = playerLocation.Y;
-        respawnPoint.z = playerLocation.Z;
+        respawnPoint.x = playerLocation.X;//Owen
+        respawnPoint.y = playerLocation.Y;//Owen
+        respawnPoint.z = playerLocation.Z;//Owen
         transform.position = respawnPoint;
         transform.rotation = respawnRotation;
-        currentHealth = healthMax;
+        playerHealth.Value = healthMax;
         VisualUpdate();
     }
 
