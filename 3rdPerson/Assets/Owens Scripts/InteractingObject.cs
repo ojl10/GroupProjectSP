@@ -12,7 +12,7 @@ public class InteractingObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (InBox && active && Input.GetKeyDown("f"))
+        if (InBox && active && Input.GetKeyDown("f") && playerHealth.Value < 3)
         {
             playerHealth.Value++;
             active = false;

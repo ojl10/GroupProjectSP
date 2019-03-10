@@ -12,11 +12,13 @@ public class Attack
     public int damage = 1;  //Amount of damage the attack deals
     [HideInInspector] public float timer = 2f;    //Internal Timer for attacking
     public bool attacking = false;  //Bool to determine if the enemy is currently attacking.
+    
 }
 /// <summary>
 /// Method for EnemyAI extends AbstractBehaviour
 /// </summary>
 public class EnemyAI : AbstractBehaviour {
+    public bool StillObject; //Owen - Lets static object damage the player
 
     public enum State   //Enum for different states the enemy can be in.
     {
@@ -244,6 +246,12 @@ public class EnemyAI : AbstractBehaviour {
     /// <param name="C"></param>
     void OnCollisionEnter(Collision C)
     {
+        if (StillObject)
+        {
+            //Damage the target
+            target.GetComponent<Health>().Damage(attack.damage, transform.position);
+        }
+
         if (C.gameObject.tag == "Player")
         {
             Vector3 direction = target.transform.position - transform.position;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Fireball : MonoBehaviour
 {
-    public GameObject SpawnPosition;
+    public Transform SpawnPosition;
     public GameObject FireBall;
     float TimeTillFire;
     float ReloadTime;
@@ -19,10 +19,10 @@ public class Fireball : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown("e"))
-        {
+        { 
             GameObject laser = Instantiate(FireBall,
-         SpawnPosition.transform.position, SpawnPosition.transform.rotation) as GameObject;
-            laser.GetComponent<Rigidbody>().velocity = transform.forward * 5;
+            SpawnPosition.transform.position, SpawnPosition.transform.rotation) as GameObject;
+            laser.GetComponent<Rigidbody>().velocity = SpawnPosition.transform.forward * 15;
         }
     }
 }
