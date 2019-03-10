@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/3D Adventure Game Kit/Assets/Example World/Scene/Scene.unity
-    guid: 00000000000000000000000000000000
+    guid: f3cd9495a673ede40a86a5edadc5d69f
+  - enabled: 1
+    path: Assets/Scenes/HUB.unity
+    guid: bca29d0ef2d249b4b9feb7786847e952
   m_configObjects: {}

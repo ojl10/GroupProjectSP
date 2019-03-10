@@ -114,6 +114,7 @@
     <Compile Include="Assets\Owens Scripts\OwensCollectable.cs" />
     <Compile Include="Assets\Owens Scripts\ScriptableObjects\CheckpointUpdate.cs" />
     <Compile Include="Assets\Owens Scripts\ScriptableObjects\intScriptable.cs" />
+    <Compile Include="Assets\Owens Scripts\ScriptableObjects\PersistableSO.cs" />
     <Compile Include="Assets\Owens Scripts\ScriptableObjects\PosScriptable.cs" />
     <Compile Include="Assets\Owens Scripts\UITEXT.cs" />
     <None Include="Assets\LowPoly\LowPolyWater_Pack\LowPoly Island\Credits.txt" />
