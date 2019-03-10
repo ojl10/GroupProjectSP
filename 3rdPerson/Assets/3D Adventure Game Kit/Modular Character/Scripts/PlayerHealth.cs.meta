@@ -1,10 +1,20 @@
 fileFormatVersion: 2
 guid: 377a4981949414b4d942958e209d1974
-timeCreated: 1449402111
-licenseType: Store
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - m_Rigidbody: {instanceID: 0}
+  - m_Motor: {instanceID: 0}
+  - m_Camera: {instanceID: 0}
+  - m_Animator: {instanceID: 0}
+  - m_Material: {instanceID: 0}
+  - m_Audio: {instanceID: 0}
+  - m_Input: {instanceID: 0}
+  - playerLocation: {fileID: 11400000, guid: 8cdc3e030795d0447b7d2889170756b5, type: 2}
+  - playerHealth: {fileID: 11400000, guid: 25186615755e2e5469e0c5d6b16319c9, type: 2}
+  - text: {instanceID: 0}
+  - hurtSfx: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

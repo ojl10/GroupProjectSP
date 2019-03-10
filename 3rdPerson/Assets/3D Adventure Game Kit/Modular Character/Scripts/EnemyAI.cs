@@ -59,7 +59,7 @@ public class EnemyAI : AbstractBehaviour {
     void Update()
     {
         //Movement Animation.
-        if (m_Animator)
+        if (m_Animator && !StillObject)
         {
             m_Animator.SetFloat("Speed", m_Rigidbody.velocity.magnitude);
         }
@@ -142,6 +142,8 @@ public class EnemyAI : AbstractBehaviour {
     /// </summary>
     void Movement()
     {
+        if (!StillObject)
+        { 
         Vector3 moveVector = Vector3.zero;
 
         if (state != State.Dead && state != State.Attack)
@@ -156,7 +158,7 @@ public class EnemyAI : AbstractBehaviour {
         }
 
         m_Motor.movement.movementDirection = moveVector;
-
+    }
     }
     //Calls the attack Ienumerator and sets the enemy to attacking.
     void Melee()

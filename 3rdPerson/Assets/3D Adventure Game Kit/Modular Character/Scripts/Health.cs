@@ -36,14 +36,9 @@ public class Health : AbstractBehaviour {
         transform.position = respawnPoint;//Owen
         //respawnPoint = transform.position;
         respawnRotation = transform.rotation;
+        
     }
-    private void Update()
-    {
-        if (playerHealth.Value <= 0)
-        {
-            Dead();
-        }
-    }
+
 
     /// <summary>
     /// Damage Method handles the conditions on how the player is damaged, knockback and other additional effects which happen when the character loses life.

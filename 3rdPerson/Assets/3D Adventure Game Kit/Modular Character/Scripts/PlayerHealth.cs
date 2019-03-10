@@ -24,6 +24,14 @@ public class PlayerHealth : Health {
         VisualUpdate();
     }
 
+    private void Update()
+    {
+        if (playerHealth.Value <= 0)
+        {
+            Dead();
+        }
+    }
+
     /// <summary>
     /// Knockback method uses Health.cs base knockback and also plays the audio when the character is knocked back.
     /// </summary>

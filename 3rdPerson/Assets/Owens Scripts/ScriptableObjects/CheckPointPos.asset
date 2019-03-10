@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 987482bef03044a46b20f8aba66cf0d0, type: 3}
   m_Name: CheckPointPos
   m_EditorClassIdentifier: 
-  X: 4.967
-  Y: 0.063
-  Z: 8.453
+  X: 3.66
+  Y: 0.06
+  Z: 11.57
