@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Fireball : MonoBehaviour
 {
+    public Camera MCam;
     public Transform SpawnPosition;
     public GameObject FireBall;
     float TimeTillFire;
@@ -18,10 +19,12 @@ public class Fireball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SpawnPosition.rotation = MCam.transform.rotation;
+
         if (Input.GetKeyDown("e"))
         { 
             GameObject laser = Instantiate(FireBall,
-            SpawnPosition.transform.position, SpawnPosition.transform.rotation) as GameObject;
+            SpawnPosition.transform.position, SpawnPosition.transform.rotation);
             laser.GetComponent<Rigidbody>().velocity = SpawnPosition.transform.forward * 15;
         }
     }

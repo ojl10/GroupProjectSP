@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 461992}
   - component: {fileID: 5497006}
   - component: {fileID: 13646566}
+  - component: {fileID: 1783957308846176001}
   - component: {fileID: 11406912}
   - component: {fileID: 11492650}
   - component: {fileID: 13528284}
@@ -405,6 +406,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1783957308846176001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539215a19d7cd324b9b3898f0da7af74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyHealth: {fileID: 0}
 --- !u!114 &11406912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,6 +492,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Audio: {fileID: 0}
   m_Input: {fileID: 0}
+  StillObject: 0
   state: 0
   target: {fileID: 0}
   attack:
@@ -531,6 +546,8 @@ MonoBehaviour:
   invincibility: 0
   respawnPoint: {x: 0, y: 0, z: 0}
   respawnRotation: {x: 0, y: 0, z: 0, w: 0}
+  playerLocation: {fileID: 0}
+  playerHealth: {fileID: 0}
   ai: {fileID: 11492650}
 --- !u!95 &9539248
 Animator:
