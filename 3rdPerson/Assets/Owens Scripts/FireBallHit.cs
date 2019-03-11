@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class FireBallHit : MonoBehaviour
 {
+    //Future ideas
+    //Two Particle effects for hitting a collision, one for hitting an Enemy and one for anything else hit
+    //Two diffrent sound effects for each
+    //ammo/cool down time or both
+
     public float BulletLife;
 
     // Update is called once per frame
@@ -15,20 +20,18 @@ public class FireBallHit : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
-
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Enemy" && collision.gameObject.GetComponent(typeof(TakeDamager)))
         {
-            TakeDamager addscores = other.GetComponent<TakeDamager>(); //if component that touches collectables has the IAddScore component, call the interface
+            TakeDamager addscores = collision.gameObject.GetComponent<TakeDamager>(); //if component that touches collectables has the IAddScore component, call the interface
             addscores.ITakeDamage(1);
             Destroy(this.gameObject);
         }
         else
         {
-          
+            Destroy(this.gameObject);
         }
-        
     }
+
 }

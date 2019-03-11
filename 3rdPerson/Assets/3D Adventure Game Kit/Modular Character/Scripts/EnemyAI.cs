@@ -248,7 +248,7 @@ public class EnemyAI : AbstractBehaviour {
     /// <param name="C"></param>
     void OnCollisionEnter(Collision C)
     {
-        if (StillObject)
+        if (StillObject && C.gameObject.tag == "Player") //Owen
         {
             //Damage the target
             target.GetComponent<Health>().Damage(attack.damage, transform.position);
