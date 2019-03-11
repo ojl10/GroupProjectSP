@@ -15,8 +15,7 @@ public class FireBallHit : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Enemy")
         {
@@ -26,8 +25,8 @@ public class FireBallHit : MonoBehaviour
         }
         else
         {
-          
+
         }
-        
     }
+
 }

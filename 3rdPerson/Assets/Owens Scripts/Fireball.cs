@@ -10,13 +10,6 @@ public class Fireball : MonoBehaviour
     float TimeTillFire;
     float ReloadTime;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         SpawnPosition.rotation = MCam.transform.rotation;
