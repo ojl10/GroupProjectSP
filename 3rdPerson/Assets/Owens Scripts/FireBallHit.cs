@@ -20,7 +20,7 @@ public class FireBallHit : MonoBehaviour
         if (BulletLife <= 0)
         {
             NonEnemyHit.Play();
-            Destroy(this.gameObject);
+            Destroy(this.gameObject, 0.3f);
         }
     }
     private void OnCollisionEnter(Collision collision)
