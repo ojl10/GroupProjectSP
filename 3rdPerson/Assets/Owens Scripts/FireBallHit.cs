@@ -10,6 +10,8 @@ public class FireBallHit : MonoBehaviour
     //ammo/cool down time or both
 
     public float BulletLife;
+    public ParticleSystem EnemyHit;
+    public ParticleSystem NonEnemyHit;
 
     // Update is called once per frame
     void Update()
@@ -17,6 +19,7 @@ public class FireBallHit : MonoBehaviour
         BulletLife -= Time.deltaTime;
         if (BulletLife <= 0)
         {
+            NonEnemyHit.Play();
             Destroy(this.gameObject);
         }
     }
@@ -26,12 +29,13 @@ public class FireBallHit : MonoBehaviour
         {
             TakeDamager addscores = collision.gameObject.GetComponent<TakeDamager>(); //if component that touches collectables has the IAddScore component, call the interface
             addscores.ITakeDamage(1);
-            Destroy(this.gameObject);
+            EnemyHit.Play();
+            Destroy(this.gameObject, 0.3f);
         }
         else
         {
-            Destroy(this.gameObject);
+            NonEnemyHit.Play();
+            Destroy(gameObject, 0.3f);
         }
     }
-
 }
