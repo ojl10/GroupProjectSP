@@ -9,7 +9,7 @@ public class Fireball : MonoBehaviour
     public GameObject FireBall;
     public ParticleSystem Fire;
     public float TimeTillFire;
-    public float ReloadTime;
+    public float ReloadTime = 0.3f;
     public bool canFire;
 
     void Update()
