@@ -12,11 +12,13 @@ public class Attack
     public int damage = 1;  //Amount of damage the attack deals
     [HideInInspector] public float timer = 2f;    //Internal Timer for attacking
     public bool attacking = false;  //Bool to determine if the enemy is currently attacking.
+    
 }
 /// <summary>
 /// Method for EnemyAI extends AbstractBehaviour
 /// </summary>
 public class EnemyAI : AbstractBehaviour {
+    public bool StillObject; //Owen - Lets static object damage the player
 
     public enum State   //Enum for different states the enemy can be in.
     {
@@ -57,7 +59,7 @@ public class EnemyAI : AbstractBehaviour {
     void Update()
     {
         //Movement Animation.
-        if (m_Animator)
+        if (m_Animator && !StillObject)
         {
             m_Animator.SetFloat("Speed", m_Rigidbody.velocity.magnitude);
         }
@@ -140,6 +142,8 @@ public class EnemyAI : AbstractBehaviour {
     /// </summary>
     void Movement()
     {
+        if (!StillObject)
+        { 
         Vector3 moveVector = Vector3.zero;
 
         if (state != State.Dead && state != State.Attack)
@@ -154,7 +158,7 @@ public class EnemyAI : AbstractBehaviour {
         }
 
         m_Motor.movement.movementDirection = moveVector;
-
+    }
     }
     //Calls the attack Ienumerator and sets the enemy to attacking.
     void Melee()
@@ -244,6 +248,12 @@ public class EnemyAI : AbstractBehaviour {
     /// <param name="C"></param>
     void OnCollisionEnter(Collision C)
     {
+        if (StillObject && C.gameObject.tag == "Player") //Owen
+        {
+            //Damage the target
+            target.GetComponent<Health>().Damage(attack.damage, transform.position);
+        }
+
         if (C.gameObject.tag == "Player")
         {
             Vector3 direction = target.transform.position - transform.position;

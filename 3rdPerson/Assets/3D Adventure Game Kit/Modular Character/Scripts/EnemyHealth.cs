@@ -7,6 +7,7 @@ using System.Collections;
 public class EnemyHealth : Health {
 
     public EnemyAI ai;  //Reference to the EnemyAi.cs on the character.
+    public bool isDead;//Owen
 
     /// <summary>
     /// Method uses the base Start from Health.cs however retrieving any necessary references.
@@ -15,13 +16,23 @@ public class EnemyHealth : Health {
     {
         base.Start();
         ai = GetComponent<EnemyAI>();
+        isDead = false;//Owen
 
     }
+    private void Update()//Owen
+    {
+        if (currentHealth <= 0 && !isDead)
+        {
+            Dead();
+            isDead = true; 
+        }
+    }
+   
 
-    /// <summary>
-    /// Method overrides the Dead method from Health.
-    /// </summary>
-    public override void Dead()
+/// <summary>
+/// Method overrides the Dead method from Health.
+/// </summary>
+public override void Dead()
     {
         //Communicate the information to the EnemyAI.
         ai.state = EnemyAI.State.Dead;

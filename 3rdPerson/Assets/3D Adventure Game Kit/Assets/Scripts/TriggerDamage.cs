@@ -8,7 +8,7 @@ public class TriggerDamage : MonoBehaviour {
 
     public int damage = 5;  //Amount of damage
     public bool instaKill = false;  //Bool which changes the damage to equal the current health.
-
+    Health kb;
     /// <summary>
     /// When the trigger is entered by the player, it deals damage to that player based on the damage variable.
     /// </summary>
@@ -25,6 +25,8 @@ public class TriggerDamage : MonoBehaviour {
             }
             //Damages the player
             C.GetComponent<Health>().Damage(dmg, null);
+            kb.Knockback(this.transform.position);
         }
     }
+
 }

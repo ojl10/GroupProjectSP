@@ -24,4 +24,6 @@ public class CollectableManager : MonoBehaviour, IAddScore
     {
         OwensCollectables.Value++;
     }
+
+
 }
