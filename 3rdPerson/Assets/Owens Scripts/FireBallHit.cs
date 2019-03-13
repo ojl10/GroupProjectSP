@@ -17,7 +17,8 @@ public class FireBallHit : MonoBehaviour
     void Update()
     {
         BulletLife -= Time.deltaTime;
-        if (BulletLife <= 0)
+        if (BulletLife <= 0) 
+
         {
             NonEnemyHit.Play();
             Destroy(this.gameObject, 0.3f);

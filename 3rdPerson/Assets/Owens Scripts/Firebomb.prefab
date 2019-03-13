@@ -9361,7 +9361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3497257083897691877}
   - component: {fileID: 3497257083897691898}
-  - component: {fileID: 4519015780240520060}
+  - component: {fileID: 3478554310340640290}
   - component: {fileID: 3497257083897691876}
   m_Layer: 2
   m_Name: Firebomb
@@ -9403,7 +9403,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4519015780240520060
+--- !u!114 &3478554310340640290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9415,7 +9415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37af71fcd70c5644287c914685b85fd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletLife: 4
+  BulletLife: 3
   EnemyHit: {fileID: 8681668534973478802}
   NonEnemyHit: {fileID: 7006905137156506433}
 --- !u!65 &3497257083897691876
