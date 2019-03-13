@@ -15,7 +15,6 @@ public class Fireball : MonoBehaviour
     void Update()
     {
         SpawnPosition.rotation = MCam.transform.rotation;
-
         if (Input.GetKeyDown("e") && canFire)
         { 
             GameObject laser = Instantiate(FireBall,
