@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Fireball : AbstractBehaviour
 {
-    public Camera MCam;
+    public Camera MCam;   
     public Transform SpawnPosition;
     public GameObject FireBall;
 
@@ -19,7 +19,6 @@ public class Fireball : AbstractBehaviour
     {
         MCam = FindObjectOfType<Camera>();
     }
-
     void Update()
     {
         SpawnPosition.rotation = MCam.transform.rotation;
@@ -38,9 +37,7 @@ public class Fireball : AbstractBehaviour
         if (TimeTillFire <= 0)
         {
             canFire = true;
-
         }
-
     }
 
     void FireBallAttack()
