@@ -12,6 +12,7 @@ public class FireBallHit : MonoBehaviour
     public float BulletLife;
     public ParticleSystem EnemyHit;
     public ParticleSystem NonEnemyHit;
+    public GameObject Player;
 
     // Update is called once per frame
     void Update()
@@ -33,7 +34,7 @@ public class FireBallHit : MonoBehaviour
             EnemyHit.Play();
             Destroy(this.gameObject, 0.3f);
         }
-        else
+        else if (collision.gameObject.tag != "Enemy" && collision.gameObject.tag != "Player")
         {
             NonEnemyHit.Play();
             Destroy(gameObject, 0.3f);

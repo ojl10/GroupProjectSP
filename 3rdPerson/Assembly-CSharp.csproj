@@ -89,6 +89,7 @@
     <Compile Include="Assets\3D Adventure Game Kit\Modular Character\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Callums Scripts\GrapplingHook\Scripts\GrapplingHook.cs" />
     <Compile Include="Assets\Callums Scripts\GrapplingHook\Scripts\HookDetector.cs" />
+    <Compile Include="Assets\CharacterSword.cs" />
     <Compile Include="Assets\LowPoly\Low Poly Modular Terrain Pack\Bonus_Assets\Scripts\ModularTerrainCameraControl.cs" />
     <Compile Include="Assets\LowPoly\Low Poly Modular Terrain Pack\Bonus_Assets\Scripts\ModularTerrainCloudsControl.cs" />
     <Compile Include="Assets\LowPoly\Low Poly Modular Terrain Pack\Bonus_Assets\Scripts\ModularTerrainSunControl.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Assets\Owens Scripts\Interfaces\TakeDamager.cs" />
     <Compile Include="Assets\Owens Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Owens Scripts\OwensCollectable.cs" />
+    <Compile Include="Assets\Owens Scripts\Player\SwordAttack.cs" />
     <Compile Include="Assets\Owens Scripts\ScriptableObjects\CheckpointUpdate.cs" />
     <Compile Include="Assets\Owens Scripts\ScriptableObjects\intScriptable.cs" />
     <Compile Include="Assets\Owens Scripts\ScriptableObjects\PersistableSO.cs" />

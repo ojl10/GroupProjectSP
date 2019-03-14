@@ -85,7 +85,6 @@ public class EnemyAI : AbstractBehaviour {
                 //If the enemy is in Idle if it is in idle, if the enemy has a target change to chase state.
                 if (target)
                     state = State.Chase;
-                m_Animator.SetTrigger("Chase");
                 break;
             case State.Chase:
                 if (attack.attacking)

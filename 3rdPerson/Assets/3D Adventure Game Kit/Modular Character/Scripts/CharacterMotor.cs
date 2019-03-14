@@ -99,6 +99,8 @@ public class CharacterMotor : AbstractBehaviour
         CheckGrounded();
         CheckCollision();
         Rotation();
+        
+
     }
 
 
@@ -199,7 +201,6 @@ public class CharacterMotor : AbstractBehaviour
         }
     }
 
-
     /// <summary>
     /// This method places a ray directly forward from the player to detect where the player is facing into a wall. This is used for additional animation support and wall jumping.
     /// </summary>
@@ -223,8 +224,6 @@ public class CharacterMotor : AbstractBehaviour
         {
             collision.wallCollision = false;
         }
-
-
     }
 
 
@@ -251,16 +250,12 @@ public class CharacterMotor : AbstractBehaviour
             {
                 //This will attempt to rotate the character to his movementDirections if none of the conditions apply.
                 rotation.rotationDirection = movement.movementDirection;
-
-
             }
         }
         else
         {
             //However if the rotationDirection doesn't have a value the character will face the direction of the inputted movement.
             rotation.rotationDirection = movement.movementDirection;
-
-
         }
 
 
@@ -294,11 +289,7 @@ public class CharacterMotor : AbstractBehaviour
                 //Input the new rotation by the gradually rotating the character's rotation towards the new rotation based on the new calculated rotation speed.
                 transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, Time.deltaTime * newRotationSpeed);
             }
-
-
         }
-
-
     }
 
 
@@ -373,10 +364,6 @@ public class CharacterMotor : AbstractBehaviour
         m_Rigidbody.AddForce(newVelocity, ForceMode.VelocityChange);
 
 
-
-
-
-
         //If the character is sliding, an additional force will be applied down on the character forcing the character to slide.
         if (movement.sliding)
         {
@@ -385,7 +372,6 @@ public class CharacterMotor : AbstractBehaviour
 
 
     }
-
 
 
 
@@ -412,6 +398,4 @@ public class CharacterMotor : AbstractBehaviour
     {
         general.forceInfluence = false;
     }
-
-
 }
