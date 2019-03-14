@@ -22,6 +22,7 @@ public class Fireball : AbstractBehaviour
     void Update()
     {
         SpawnPosition.rotation = MCam.transform.rotation;
+
         if (Input.GetKeyDown("e") && canFire)
         {
             m_Animator.SetTrigger("FireBall");

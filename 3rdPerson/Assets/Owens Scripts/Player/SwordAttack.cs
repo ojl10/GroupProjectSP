@@ -35,10 +35,11 @@ public class SwordAttack : AbstractBehaviour
                     EAI = enemy.gameObject.GetComponent<EnemyAI>();
                     EAI.TakenHit(); 
                 }
-                
-
                 //audio here
-
+            }
+            else
+            {
+                //not enemy
             }
         }
 

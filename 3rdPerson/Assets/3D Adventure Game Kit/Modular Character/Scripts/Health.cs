@@ -11,7 +11,7 @@ public class Health : AbstractBehaviour {
     public float invincibilityTime = 1f;   //The time the character has before being allowed to be damaged again.
    
     public bool knockbackOnDamage = true;           //Bool enables knockback when the character is damaged.
-    public float knockbackForce = 10f;              //If knockback is enabled this is the force the character is knock backed.
+    public float knockbackForce = 1f;              //If knockback is enabled this is the force the character is knock backed.
     public bool changeColorOnDamage = true;         //If this is enabled the character will turn a different color throughout the invincibility timer.
 
     [HideInInspector]public bool invincibility = false;     //If this bool is enabled the character cannot take damage.
