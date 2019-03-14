@@ -48,7 +48,7 @@ public class Fireball : AbstractBehaviour
         GameObject laser = Instantiate(FireBall,
             SpawnPosition.transform.position, SpawnPosition.transform.rotation);
         Fire.Play();
-        laser.GetComponent<Rigidbody>().velocity = SpawnPosition.transform.forward * 15;
+        //laser.GetComponent<Rigidbody>().velocity = SpawnPosition.transform.forward * 15;
         TimeTillFire = ReloadTime;
         canFire = false;
     }

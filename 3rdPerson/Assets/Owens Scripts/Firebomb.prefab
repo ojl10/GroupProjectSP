@@ -9363,6 +9363,7 @@ GameObject:
   - component: {fileID: 3497257083897691898}
   - component: {fileID: 3478554310340640290}
   - component: {fileID: 3497257083897691876}
+  - component: {fileID: 6551935871875811144}
   m_Layer: 2
   m_Name: Firebomb
   m_TagString: Untagged
@@ -9418,6 +9419,8 @@ MonoBehaviour:
   BulletLife: 3
   EnemyHit: {fileID: 8681668534973478802}
   NonEnemyHit: {fileID: 7006905137156506433}
+  Player: {fileID: 0}
+  Target: {fileID: 0}
 --- !u!65 &3497257083897691876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9430,6 +9433,19 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.58434135, y: 0.51651925, z: 0.5554963}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &6551935871875811144
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3497257083897691899}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 4.6412163
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7746292751078661618
 GameObject:

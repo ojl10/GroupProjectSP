@@ -9,14 +9,23 @@ public class FireBallHit : MonoBehaviour
     //Two diffrent sound effects for each
     //ammo/cool down time or both
 
-    public float BulletLife;
-    public ParticleSystem EnemyHit;
-    public ParticleSystem NonEnemyHit;
-    public GameObject Player;
+    public float BulletLife;            //Lifespan of the bullet
+    public ParticleSystem EnemyHit;     //Enemy has been hit particle effect for visual feedback
+    public ParticleSystem NonEnemyHit;  //When anything but a enemy has been hit play another particle effect
+    public GameObject Player;           //The player
+
+    public Transform Target;            //Targeting system
 
     // Update is called once per frame
+    private void Start()
+    {
+        Target = null;
+        GetComponent<Rigidbody>().velocity = this.transform.forward * 15;
+    }
+
     void Update()
     {
+        
         BulletLife -= Time.deltaTime;
         if (BulletLife <= 0) 
 
@@ -24,20 +33,35 @@ public class FireBallHit : MonoBehaviour
             NonEnemyHit.Play();
             Destroy(this.gameObject, 0.3f);
         }
+        if (Target != null)
+        {
+            transform.LookAt(Target);
+            GetComponent<Rigidbody>().velocity = this.transform.forward * 15;
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
+
+
         if (collision.gameObject.tag == "Enemy" && collision.gameObject.GetComponent(typeof(TakeDamager)))
         {
-            TakeDamager addscores = collision.gameObject.GetComponent<TakeDamager>(); //if component that touches collectables has the IAddScore component, call the interface
+            TakeDamager addscores = collision.gameObject.GetComponent<TakeDamager>(); //if component that touches enemies, call the interface and damage
             addscores.ITakeDamage(1);
             EnemyHit.Play();
             Destroy(this.gameObject, 0.3f);
         }
-        else if (collision.gameObject.tag != "Enemy" && collision.gameObject.tag != "Player")
+        else if  (collision.gameObject.tag != "Player")
         {
             NonEnemyHit.Play();
             Destroy(gameObject, 0.3f);
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+            {
+                Target = other.transform;
+            }   
+    }
+
 }

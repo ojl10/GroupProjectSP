@@ -243,6 +243,11 @@ public class EnemyAI : AbstractBehaviour {
         }
     }
 
+    public void TakenHit()
+    {
+        m_Animator.SetTrigger("Damaged");
+    }
+
     /// <summary>
     /// This handles the ability for the player to damage the enemy.
     /// </summary>
@@ -259,7 +264,7 @@ public class EnemyAI : AbstractBehaviour {
         {
             Vector3 direction = target.transform.position - transform.position;
             //Checks the direction of the target to the enemy.
-            if (direction.y >= .7f)
+            if (direction.y >= 0.7f)
             {
                 //If the target is moving down.
                 if (C.transform.GetComponent<CharacterMotor>().m_Rigidbody.velocity.y < 0.2) { 

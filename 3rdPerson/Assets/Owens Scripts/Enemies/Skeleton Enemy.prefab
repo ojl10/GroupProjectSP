@@ -688,7 +688,7 @@ GameObject:
   - component: {fileID: 2619804672665168620}
   - component: {fileID: 9139018670123652601}
   m_Layer: 2
-  m_Name: Enemy (1)
+  m_Name: Skeleton Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -830,7 +830,7 @@ MonoBehaviour:
   state: 0
   target: {fileID: 0}
   attack:
-    range: 1.5
+    range: 2
     coolDown: 0.2
     animationTime: 1
     damage: 1
@@ -871,8 +871,8 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Audio: {fileID: 0}
   m_Input: {fileID: 0}
-  healthMax: 2
-  currentHealth: 2
+  healthMax: 4
+  currentHealth: 4
   invincibilityTime: 1
   knockbackOnDamage: 1
   knockbackForce: 25
