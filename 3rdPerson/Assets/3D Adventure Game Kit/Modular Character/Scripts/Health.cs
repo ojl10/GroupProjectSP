@@ -11,7 +11,7 @@ public class Health : AbstractBehaviour {
     public float invincibilityTime = 1f;   //The time the character has before being allowed to be damaged again.
    
     public bool knockbackOnDamage = true;           //Bool enables knockback when the character is damaged.
-    public float knockbackForce = 1f;              //If knockback is enabled this is the force the character is knock backed.
+    public float knockbackForce = 10f;              //If knockback is enabled this is the force the character is knock backed.
     public bool changeColorOnDamage = true;         //If this is enabled the character will turn a different color throughout the invincibility timer.
 
     [HideInInspector]public bool invincibility = false;     //If this bool is enabled the character cannot take damage.
@@ -52,9 +52,13 @@ public class Health : AbstractBehaviour {
             ChangeHealth(-value);
             //Check if the current health is less than or equal to 0, if so kill the player.
             
-            if (playerHealth.Value <= 0)
+            if (playerHealth.Value <= 0) // Owen - Uses the Scriptable Object Player health to determine health
             {
-                Dead();
+                GetComponent<Animator>().SetTrigger("Dead"); //Dead Anim
+                GetComponent<CharacterMotor>().movement.movementSpeed = 0; // No movement
+                GetComponent<InputManager>().enabled = false;//No input as a catch
+                Invoke("Dead", 3f); //delay before respawn
+                
             }
             else
             {
@@ -109,6 +113,9 @@ public class Health : AbstractBehaviour {
     /// </summary>
     public virtual void Dead()
     {
+        
+        GetComponent<InputManager>().enabled = true; //No mo
+        GetComponent<CharacterMotor>().movement.movementSpeed = 8;
         respawnPoint.x = playerLocation.X;//Owen
         respawnPoint.y = playerLocation.Y;//Owen
         respawnPoint.z = playerLocation.Z;//Owen

@@ -27,7 +27,7 @@ public class Fireball : AbstractBehaviour
         {
             m_Animator.SetTrigger("FireBall");
 
-            Invoke ("FireBallAttack",0.1f);
+            Invoke ("FireBallAttack",0.3f);
             
         }
         else if (!canFire && TimeTillFire >= 0)

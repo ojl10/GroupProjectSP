@@ -28,7 +28,8 @@ public class PlayerHealth : Health {
     {
         if (playerHealth.Value <= 0)
         {
-            Dead();
+            //Dead();
+            //Invoke("Dead", 3f);
         }
     }
 

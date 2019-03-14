@@ -50,7 +50,7 @@ public class BossLookAt : AbstractBehaviour
     void SlamATK()
     {
         SlamPrt.Play();
-        target.GetComponent<Health>().Damage(1, transform.position);
+        target.GetComponent<Health>().Damage(1, target.position);  //transform.position   removed
     }
 
 

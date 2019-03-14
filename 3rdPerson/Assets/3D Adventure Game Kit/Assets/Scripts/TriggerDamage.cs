@@ -22,10 +22,15 @@ public class TriggerDamage : MonoBehaviour {
             if (instaKill)
             {
                 dmg = C.GetComponent<Health>().currentHealth;
+                C.GetComponent<Health>().Damage(dmg, null);
             }
-            //Damages the player
-            C.GetComponent<Health>().Damage(dmg, null);
-            kb.Knockback(this.transform.position);
+            else
+            {
+                //Damages the player
+                C.GetComponent<Health>().Damage(dmg, null);
+                kb.Knockback(this.transform.position);
+            }
+           
         }
     }
 
