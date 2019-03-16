@@ -16,9 +16,12 @@ public class FireBallHit : MonoBehaviour
 
     public Transform Target;            //Targeting system
 
+    Collider ThisCollider;
+
     // Update is called once per frame
     private void Start()
     {
+        ThisCollider = GetComponent<Collider>();
         Target = null;
         GetComponent<Rigidbody>().velocity = this.transform.forward * 15;
     }
@@ -39,15 +42,16 @@ public class FireBallHit : MonoBehaviour
             GetComponent<Rigidbody>().velocity = this.transform.forward * 15;
         }
     }
+
+
     private void OnCollisionEnter(Collision collision)
     {
-
-
         if (collision.gameObject.tag == "Enemy" && collision.gameObject.GetComponent(typeof(TakeDamager)))
         {
-            TakeDamager addscores = collision.gameObject.GetComponent<TakeDamager>(); //if component that touches enemies, call the interface and damage
-            addscores.ITakeDamage(1);
             EnemyHit.Play();
+            TakeDamager addscores = collision.gameObject.GetComponent<TakeDamager>(); //if component that touches enemies, call the interface and damage     
+            addscores.ITakeDamage(1);
+            ThisCollider.enabled = !ThisCollider.enabled;
             Destroy(this.gameObject, 0.3f);
         }
         else if  (collision.gameObject.tag != "Player")
