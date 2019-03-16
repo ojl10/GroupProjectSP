@@ -9,6 +9,7 @@ public class BossLookAt : AbstractBehaviour
     public float SlamCoolDown = 5f;
     public float Timer;
     public Animator Boss;
+    float rot;
 
     public ParticleSystem SlamPrt;
 
@@ -34,7 +35,11 @@ public class BossLookAt : AbstractBehaviour
         
         if (target != null && Timer > 0)
         {
-            //transform.LookAt(target);
+            // transform.LookAt(target);
+            Vector3 targetDir = target.position -= transform.position;
+            float angle = Vector3.Angle(targetDir, transform.forward);
+          
+            //transform.rotation = Quaternion.Euler(0,angle,0);
             Timer -= Time.deltaTime;
         }
         else if (target != null && Timer <= 0)

@@ -12,7 +12,7 @@ public class Fireball : AbstractBehaviour
     public ParticleSystem Fire;
 
     public float TimeTillFire;
-    public float ReloadTime = 0.3f;
+    public float ReloadTime = 0.5f;
     public bool canFire;
 
     private void Start()

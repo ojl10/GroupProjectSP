@@ -2096,6 +2096,7 @@ GameObject:
   - component: {fileID: 1882042390}
   - component: {fileID: 1882042389}
   - component: {fileID: 1882042388}
+  - component: {fileID: 3166433493131127648}
   m_Layer: 2
   m_Name: MAINCHAR
   m_TagString: Player
@@ -2187,6 +2188,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Audio: {fileID: 0}
   m_Input: {fileID: 0}
+  enemy: {fileID: 0}
+  TimeTillFire: 0
+  ReloadTime: 0.3
+  canFire: 0
 --- !u!114 &1882042395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2428,6 +2433,19 @@ MonoBehaviour:
   inverseCameraV: 0
   inverseCameraH: 0
   lockControlScheme: 0
+--- !u!65 &3166433493131127648
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882042387}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8753237, y: 1.9145279, z: 1.8196077}
+  m_Center: {x: 0.0000000017763587, y: 0.7281637, z: 0.40980327}
 --- !u!1 &1933601855
 GameObject:
   m_ObjectHideFlags: 0
