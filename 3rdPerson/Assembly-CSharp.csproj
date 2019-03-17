@@ -116,6 +116,7 @@
     <Compile Include="Assets\Owens Scripts\Interfaces\TakeDamager.cs" />
     <Compile Include="Assets\Owens Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Owens Scripts\OwensCollectable.cs" />
+    <Compile Include="Assets\Owens Scripts\Player\AnimationEventHandler.cs" />
     <Compile Include="Assets\Owens Scripts\Player\SwordAttack.cs" />
     <Compile Include="Assets\Owens Scripts\PuzzleInteractObj.cs" />
     <Compile Include="Assets\Owens Scripts\PuzzleObject.cs" />

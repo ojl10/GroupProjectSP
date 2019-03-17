@@ -362,19 +362,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 124880, guid: 46dbb1ba9bcf27547b8d3958a1d0d9dc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 486146, guid: 46dbb1ba9bcf27547b8d3958a1d0d9dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.96271
+      value: 47.6
       objectReference: {fileID: 0}
     - target: {fileID: 486146, guid: 46dbb1ba9bcf27547b8d3958a1d0d9dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.7
+      value: -6.1
       objectReference: {fileID: 0}
     - target: {fileID: 486146, guid: 46dbb1ba9bcf27547b8d3958a1d0d9dc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -19.532204
+      value: 27.4
       objectReference: {fileID: 0}
     - target: {fileID: 486146, guid: 46dbb1ba9bcf27547b8d3958a1d0d9dc, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1026,6 +1026,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1470763659}
     m_Modifications:
+    - target: {fileID: 165340, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
+      propertyPath: m_Name
+      value: Crystal_s_01 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 409286, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.16970563
@@ -1069,10 +1073,6 @@ PrefabInstance:
     - target: {fileID: 409286, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 165340, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
-      propertyPath: m_Name
-      value: Crystal_s_01 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
@@ -1165,7 +1165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 190768, guid: c9cbdd65e00dd4146a6506314de42c9c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 434546, guid: c9cbdd65e00dd4146a6506314de42c9c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1351,6 +1351,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1470763659}
     m_Modifications:
+    - target: {fileID: 150516, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
+      propertyPath: m_Name
+      value: Crystal_s_02 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 466030, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.247
@@ -1394,10 +1398,6 @@ PrefabInstance:
     - target: {fileID: 466030, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 150516, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
-      propertyPath: m_Name
-      value: Crystal_s_02 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
@@ -1585,6 +1585,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 799983731}
     m_Modifications:
+    - target: {fileID: 165340, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
+      propertyPath: m_Name
+      value: Crystal_s_01
+      objectReference: {fileID: 0}
     - target: {fileID: 409286, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.01629436
@@ -1628,10 +1632,6 @@ PrefabInstance:
     - target: {fileID: 409286, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 165340, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
-      propertyPath: m_Name
-      value: Crystal_s_01
       objectReference: {fileID: 0}
     - target: {fileID: 2366952, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1704,7 +1704,7 @@ Transform:
   - {fileID: 1569546952}
   - {fileID: 309776341}
   m_Father: {fileID: 1544839930}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &546861084
 MonoBehaviour:
@@ -2633,6 +2633,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1587795081121793276, guid: 29ec1b120140eb0468a30f9ec4ec1262,
+        type: 3}
+      propertyPath: m_Name
+      value: Checkpoint
+      objectReference: {fileID: 0}
     - target: {fileID: 1593397676747080548, guid: 29ec1b120140eb0468a30f9ec4ec1262,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2687,11 +2692,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1587795081121793276, guid: 29ec1b120140eb0468a30f9ec4ec1262,
-        type: 3}
-      propertyPath: m_Name
-      value: Checkpoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29ec1b120140eb0468a30f9ec4ec1262, type: 3}
@@ -2988,6 +2988,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1587795081121793276, guid: 29ec1b120140eb0468a30f9ec4ec1262,
+        type: 3}
+      propertyPath: m_Name
+      value: Checkpoint (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 1593397676747080548, guid: 29ec1b120140eb0468a30f9ec4ec1262,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3042,11 +3047,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -108.48999
-      objectReference: {fileID: 0}
-    - target: {fileID: 1587795081121793276, guid: 29ec1b120140eb0468a30f9ec4ec1262,
-        type: 3}
-      propertyPath: m_Name
-      value: Checkpoint (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29ec1b120140eb0468a30f9ec4ec1262, type: 3}
@@ -3233,6 +3233,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 799983731}
     m_Modifications:
+    - target: {fileID: 150516, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
+      propertyPath: m_Name
+      value: Crystal_s_02
+      objectReference: {fileID: 0}
     - target: {fileID: 466030, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.061
@@ -3276,10 +3280,6 @@ PrefabInstance:
     - target: {fileID: 466030, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 150516, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
-      propertyPath: m_Name
-      value: Crystal_s_02
       objectReference: {fileID: 0}
     - target: {fileID: 2359576, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3523,6 +3523,36 @@ PrefabInstance:
     - target: {fileID: 1882042389, guid: 4cb28fa5f6dad904291a58b3271d8fd8, type: 3}
       propertyPath: currentHealth
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862141517758971897, guid: 4cb28fa5f6dad904291a58b3271d8fd8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.11109035
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862141517758971897, guid: 4cb28fa5f6dad904291a58b3271d8fd8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862141517758971897, guid: 4cb28fa5f6dad904291a58b3271d8fd8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862141517758971897, guid: 4cb28fa5f6dad904291a58b3271d8fd8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.903723
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862141517758971897, guid: 4cb28fa5f6dad904291a58b3271d8fd8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000014901161
+      objectReference: {fileID: 0}
+    - target: {fileID: 5862141517758971897, guid: 4cb28fa5f6dad904291a58b3271d8fd8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0000011175871
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cb28fa5f6dad904291a58b3271d8fd8, type: 3}
@@ -3813,6 +3843,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2113836272}
     m_Modifications:
+    - target: {fileID: 165340, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
+      propertyPath: m_Name
+      value: Crystal_s_01
+      objectReference: {fileID: 0}
     - target: {fileID: 409286, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.01629436
@@ -3857,10 +3891,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 165340, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
-      propertyPath: m_Name
-      value: Crystal_s_01
-      objectReference: {fileID: 0}
     - target: {fileID: 2366952, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3874,6 +3904,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 546861083}
     m_Modifications:
+    - target: {fileID: 150516, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
+      propertyPath: m_Name
+      value: Crystal_s_02 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 466030, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.247
@@ -3918,10 +3952,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 150516, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
-      propertyPath: m_Name
-      value: Crystal_s_02 (1)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
 --- !u!4 &1541068184 stripped
@@ -3957,8 +3987,8 @@ Transform:
   m_LocalPosition: {x: 0.70628715, y: 107.78999, z: 1.184269}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1101554720}
   - {fileID: 546861083}
+  - {fileID: 1101554720}
   - {fileID: 1470763659}
   - {fileID: 799983731}
   - {fileID: 2113836272}
@@ -5092,6 +5122,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2113836272}
     m_Modifications:
+    - target: {fileID: 150516, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
+      propertyPath: m_Name
+      value: Crystal_s_02
+      objectReference: {fileID: 0}
     - target: {fileID: 466030, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.061
@@ -5136,10 +5170,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 150516, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
-      propertyPath: m_Name
-      value: Crystal_s_02
-      objectReference: {fileID: 0}
     - target: {fileID: 2359576, guid: 3974533ccba2207409927e7c957fa16f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -5153,6 +5183,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 546861083}
     m_Modifications:
+    - target: {fileID: 165340, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
+      propertyPath: m_Name
+      value: Crystal_s_01 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 409286, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.16970563
@@ -5196,10 +5230,6 @@ PrefabInstance:
     - target: {fileID: 409286, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 165340, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
-      propertyPath: m_Name
-      value: Crystal_s_01 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5120d0ff8ad7d345a21d1bc86d12212, type: 3}
@@ -5476,6 +5506,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 907879732520321365, guid: d530b36e062d31943bc6ae189672b267,
+        type: 3}
+      propertyPath: orbit.hOrbitSpeed
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 907879731458137993, guid: d530b36e062d31943bc6ae189672b267,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d530b36e062d31943bc6ae189672b267, type: 3}
 --- !u!1001 &1083210519782786352
@@ -5696,6 +5736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HubManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5976439482091743601, guid: 89c6329b10fde894da1c4826d7b31672,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5976439482091743600, guid: 89c6329b10fde894da1c4826d7b31672,
         type: 3}

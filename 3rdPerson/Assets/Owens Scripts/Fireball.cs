@@ -26,28 +26,25 @@ public class Fireball : AbstractBehaviour
         if (Input.GetKeyDown("e") && canFire)
         {
             m_Animator.SetTrigger("FireBall");
-
-            Invoke ("FireBallAttack",0.3f);
-            
+            canFire = false;
         }
         else if (!canFire && TimeTillFire >= 0)
         {
             Fire.Pause();
             TimeTillFire -= Time.deltaTime;
         }
-        if (TimeTillFire <= 0)
+        else if (TimeTillFire <= 0 & !canFire)
         {
             canFire = true;
         }
     }
 
-    void FireBallAttack()
+    void Hit()
     {
-        GameObject laser = Instantiate(FireBall,
-            SpawnPosition.transform.position, SpawnPosition.transform.rotation);
-        Fire.Play();
-        //laser.GetComponent<Rigidbody>().velocity = SpawnPosition.transform.forward * 15;
         TimeTillFire = ReloadTime;
-        canFire = false;
+        GameObject laser = Instantiate(FireBall,
+        SpawnPosition.transform.position, SpawnPosition.transform.rotation);
+        Fire.Play();
     }
+
 }
