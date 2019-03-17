@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class SwordAttack : AbstractBehaviour
 {
-    public GameObject enemy;
-    public float TimeTillFire;
-    public float ReloadTime = 0.3f;
-    public bool canFire;
+    [SerializeField]
+    GameObject enemy = null;
+    [SerializeField]
+    float TimeTillFire;
+    [SerializeField]
+    float ReloadTime = 0.3f;
+    [SerializeField]
+    bool canFire;
     EnemyAI EAI;
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -26,7 +23,7 @@ public class SwordAttack : AbstractBehaviour
             canFire = false;
             TimeTillFire = ReloadTime;
 
-            if (enemy.gameObject.GetComponent(typeof(TakeDamager)))
+            if (enemy != null && enemy.gameObject.GetComponent(typeof(TakeDamager)))
             {
                 TakeDamager addscores = enemy.gameObject.GetComponent<TakeDamager>(); //if component that touches enemies, call the interface and damage
                 addscores.ITakeDamage(1);
@@ -39,9 +36,16 @@ public class SwordAttack : AbstractBehaviour
             }
             else
             {
-                //not enemy
+
+                //not enemy audio
             }
         }
+        else
+        {
+            //null
+        }
+
+
 
          if (!canFire && TimeTillFire >= 0)
         {
@@ -60,6 +64,10 @@ public class SwordAttack : AbstractBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             enemy = other.gameObject;
+        }
+        else
+        {
+            enemy = null;
         }
     }
 

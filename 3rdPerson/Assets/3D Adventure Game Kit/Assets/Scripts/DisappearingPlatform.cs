@@ -20,7 +20,7 @@ public class DisappearingPlatform : MonoBehaviour {
     void Start()
     {
         mat = GetComponent<MeshRenderer>().material;
-        baseColor = mat.color;
+            baseColor = mat.color;      
     }
 
     /// <summary>

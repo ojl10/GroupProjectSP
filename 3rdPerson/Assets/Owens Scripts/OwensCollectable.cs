@@ -6,13 +6,12 @@ public class OwensCollectable : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        IAddScore addscores = other.GetComponent<IAddScore>();
-        if (addscores != null)
+        if (other.gameObject.tag == "Player")
         {
-             //if component that touches collectables has the IAddScore component, call the interface
+            IAddScore addscores = other.GetComponent<IAddScore>();
+            //if component that touches collectables has the IAddScore component, call the interface
             addscores.addScoreOwen();
             Destroy(gameObject);
-        }
-                 
+        }                 
     }
 }
