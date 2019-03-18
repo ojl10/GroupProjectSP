@@ -251,10 +251,10 @@ public class CharacterMotor : AbstractBehaviour
             else
             {
                 //This will attempt to rotate the character to his movementDirections if none of the conditions apply.
-                //rotation.rotationDirection = movement.movementDirection;
+                rotation.rotationDirection = movement.movementDirection;
 
                 //Owen - added this to acheive character to look forward at all times
-                rotation.rotationDirection = cameraForward;
+                //rotation.rotationDirection = cameraForward;
 
 
             }
@@ -262,10 +262,10 @@ public class CharacterMotor : AbstractBehaviour
         else
         {
             //However if the rotationDirection doesn't have a value the character will face the direction of the inputted movement.
-            //rotation.rotationDirection = movement.movementDirection;
+            rotation.rotationDirection = movement.movementDirection;
 
             //owen
-            rotation.rotationDirection = cameraForward;
+            //rotation.rotationDirection = cameraForward;
         }
 
 

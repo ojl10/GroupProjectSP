@@ -103,6 +103,8 @@
     <Compile Include="Assets\LowPoly\Low Poly Vegetation Pack\Bonus Assets\Scripts\LowPolyVegetation_CloudsControl.cs" />
     <Compile Include="Assets\LowPoly\Low Poly Vegetation Pack\Bonus Assets\Scripts\LowPolyVegetation_SunControl.cs" />
     <Compile Include="Assets\LowPoly\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
+    <Compile Include="Assets\Owens Scripts\Boss\BeamDamage.cs" />
+    <Compile Include="Assets\Owens Scripts\Boss\BossAnimationEvent.cs" />
     <Compile Include="Assets\Owens Scripts\Boss\BossLookAt.cs" />
     <Compile Include="Assets\Owens Scripts\CollectableManager.cs" />
     <Compile Include="Assets\Owens Scripts\damageOnTouch.cs" />

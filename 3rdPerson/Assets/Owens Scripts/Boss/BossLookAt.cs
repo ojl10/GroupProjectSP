@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BossLookAt : AbstractBehaviour
 {
-    [SerializeField]
-    Transform target;
+    
+    public Transform target;
     [SerializeField]
     float SlamCoolDown = 5f;
     [SerializeField]
@@ -13,8 +13,10 @@ public class BossLookAt : AbstractBehaviour
     public Animator Boss;
     [SerializeField]
     int AttackCount;
-    [SerializeField]
+    [Range(1,3), SerializeField]
     int Rand;
+
+    public float dist;
 
     bool canAttack;
 
@@ -24,7 +26,7 @@ public class BossLookAt : AbstractBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        AttackCount = 0;
+        Rand = 0;
         Boss = GetComponent<Animator>();
     }
 
@@ -41,8 +43,7 @@ public class BossLookAt : AbstractBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        //Rand = Random.Range(1,3);
+       
 
         if (target != null && Timer > 0)
         {
@@ -51,26 +52,28 @@ public class BossLookAt : AbstractBehaviour
         }
         else if (target != null && Timer <= 0)
         {
+            dist = Vector3.Distance(target.position, transform.position);
             canAttack = true;
-            //Cycle attacks here
-            //curBossState = BossState.Slam;
-            
-            if (AttackCount == 1)
-            {
+            Rand = Random.Range(1, 4);
+            if (Rand == 1 && AttackCount <= 3)
+            {     
+                AttackCount++;
                 curBossState = BossState.Slam;
                 BossStateSwitch();
             }
-            else if (AttackCount == 2)
-            {
+            else if (dist <= 16)
+            {      
+                AttackCount++;
                 curBossState = BossState.Swipe;
                 BossStateSwitch();
             }
-            else if (AttackCount == 3)
+            else if (Rand == 3 && AttackCount <= 3)
             {
+                AttackCount++;
                 curBossState = BossState.Beam;
                 BossStateSwitch();
             }
-            else
+            else if (AttackCount >= 4)
             {
                 curBossState = BossState.Exposed;
                 BossStateSwitch();
@@ -91,65 +94,48 @@ public class BossLookAt : AbstractBehaviour
             case BossState.Slam:
                 if (target != null && canAttack)
                     Boss.SetTrigger("Slam");
-                    AttackCount++;
                     Debug.Log("Slam");
-                    Timer = SlamCoolDown;
-                    canAttack = false;
-                 
+                SlamCoolDown = 3f;
+                Timer = SlamCoolDown;
+                    canAttack = false;        
                 break;
             case BossState.Swipe:
-                if (target != null && canAttack)           
-           
+                if (target != null && canAttack)                     
                     Boss.SetTrigger("Swipe");
-                    AttackCount++;
                     Debug.Log("Swipe");
+                    SlamCoolDown = 2.5f;
                     Timer = SlamCoolDown;
                     canAttack = false;
           
                 break;
             case BossState.Beam:
                 if (target != null && canAttack)
-              
                     Boss.SetTrigger("Beam");
-                    AttackCount++;
                     Debug.Log("Beam");
+                    SlamCoolDown = 3f;
                     Timer = SlamCoolDown;
                     canAttack = false;
-               
-
                 break;
             case BossState.Exposed:
                 if (AttackCount >= 4 )
-              
-                    Boss.SetTrigger("Exposed");
-                    AttackCount = 1;  
+                    Boss.SetTrigger("Exposed");  
                     Debug.Log("Exposed");
+                    canAttack = false;
+                    SlamCoolDown = 7.5f;
                     Timer = SlamCoolDown;
-                
-                              
+                    AttackCount = 0;
                 break;
             case BossState.Dead:
                 break;
         }
     }
-
-
-
-    void SlamFloor() //animation event
-    {
-        SlamPrt.Play(); //instatiate object to deal damage, allows for another collider
-        target.GetComponent<Health>().Damage(1, target.position);  //transform.position   removed
-    }
-
-
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")
         {
             target = other.transform;
         }
     }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Player")

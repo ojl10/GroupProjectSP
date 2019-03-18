@@ -46,7 +46,7 @@ public class FireBallHit : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Enemy" && collision.gameObject.GetComponent(typeof(TakeDamager)))
+        if (collision.gameObject.tag == "Enemy" || collision.gameObject.GetComponent(typeof(TakeDamager)))
         {
             EnemyHit.Play();
             TakeDamager addscores = collision.gameObject.GetComponent<TakeDamager>(); //if component that touches enemies, call the interface and damage     
