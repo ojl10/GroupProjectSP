@@ -82,12 +82,11 @@ public class CharacterMotor : AbstractBehaviour
     public MovementSettings movement = new MovementSettings();
     public RotationSettings rotation = new RotationSettings();
     public CollisionSettings collision = new CollisionSettings();
-
-
-
+    private Vector3 cameraForward;
 
     void Start()
     {
+        
         m_Rigidbody.useGravity = false;
         m_Rigidbody.freezeRotation = true;
     }
@@ -96,6 +95,9 @@ public class CharacterMotor : AbstractBehaviour
     /// </summary>
     void Update()
     {
+        cameraForward = m_Camera.transform.TransformDirection(Vector3.forward);
+        cameraForward.y = 0f;
+        cameraForward = cameraForward.normalized;
         CheckGrounded();
         CheckCollision();
         Rotation();
@@ -249,13 +251,21 @@ public class CharacterMotor : AbstractBehaviour
             else
             {
                 //This will attempt to rotate the character to his movementDirections if none of the conditions apply.
-                rotation.rotationDirection = movement.movementDirection;
+                //rotation.rotationDirection = movement.movementDirection;
+
+                //Owen - added this to acheive character to look forward at all times
+                rotation.rotationDirection = cameraForward;
+
+
             }
         }
         else
         {
             //However if the rotationDirection doesn't have a value the character will face the direction of the inputted movement.
-            rotation.rotationDirection = movement.movementDirection;
+            //rotation.rotationDirection = movement.movementDirection;
+
+            //owen
+            rotation.rotationDirection = cameraForward;
         }
 
 
