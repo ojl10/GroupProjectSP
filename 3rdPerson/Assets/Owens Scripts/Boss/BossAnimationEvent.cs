@@ -11,6 +11,9 @@ public class BossAnimationEvent : BossLookAt
     [SerializeField]
     GameObject swipeObject;
 
+    public GameObject HandSlamPos;
+    public GameObject HandSlamParticle;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,8 +29,9 @@ public class BossAnimationEvent : BossLookAt
     }
     void SlamFloor() //animation event
     {
-        
-       
+        GameObject HandSlam = Instantiate(HandSlamParticle,
+        HandSlamPos.transform.position, HandSlamPos.transform.rotation);
+
     }
     void SwipeStart()
     {

@@ -19,13 +19,13 @@ public class BossLookAt : AbstractBehaviour
     public float dist;
 
     bool canAttack;
-
+    public Transform thisTransform;
     public ParticleSystem SlamPrt;
     public BossState curBossState;
 
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         Rand = 0;
         Boss = GetComponent<Animator>();
     }
@@ -48,7 +48,15 @@ public class BossLookAt : AbstractBehaviour
         if (target != null && Timer > 0)
         {
             // transform.LookAt(target);
-            Timer -= Time.deltaTime;    
+            Timer -= Time.deltaTime;
+            if (curBossState != BossState.Exposed)
+            {
+                //thisTransform.LookAt(new Vector3(target.position.x, thisTransform.position.y, target.position.z));
+                Vector3 dir = target.position - transform.position;
+                Quaternion lookRotation = Quaternion.LookRotation(dir);
+                Vector3 rotation = Quaternion.Lerp(thisTransform.rotation, lookRotation, Time.deltaTime * 5).eulerAngles;
+                thisTransform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+            }
         }
         else if (target != null && Timer <= 0)
         {

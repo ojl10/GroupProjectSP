@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 480928}
   - component: {fileID: 3395092}
   - component: {fileID: 2362990}
+  - component: {fileID: 2614437940904756606}
   m_Layer: 0
   m_Name: Rock_Block_m_11
   m_TagString: Untagged
@@ -78,6 +79,30 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!205 &2614437940904756606
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127108}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.78281516
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.5565111
+    fadeTransitionWidth: 0
+    renderers: []
+  - screenRelativeHeight: 0.19026046
+    fadeTransitionWidth: 0
+    renderers: []
+  m_Enabled: 1
 --- !u!1 &168164
 GameObject:
   m_ObjectHideFlags: 0

@@ -135,6 +135,8 @@
     <None Include="Assets\3D Adventure Game Kit\Read Me.txt" />
     <None Include="Assets\LowPoly\Low Poly Rocks Pack\Demo\Asset _Scenes\Info.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Emissive Diffuse.shader" />
+    <None Include="Assets\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Transparent Diffuse Bump Cutout.shader" />
     <None Include="Assets\3D Adventure Game Kit\Documentation.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\LowPoly\LowPolyWater_Pack\Shaders\WaterShaded.shader" />
@@ -145,7 +147,9 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Standard Diffuse Bump.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Transparent Diffuse Bump.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\3D Adventure Game Kit\Assets\Shader\NewSurfaceShader.shader" />
