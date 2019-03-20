@@ -11,7 +11,7 @@ public class MovingPlatform : MonoBehaviour
     public Vector3 MovingTo;
     public float smooth;
     public float timeToWait = 3f;
-    bool isActive;
+    public bool isActive;
     public string State;
 
     void Start()
@@ -25,6 +25,10 @@ public class MovingPlatform : MonoBehaviour
 
     void changeDirection()
     {
+        if (isActive)
+        {
+
+        
         if (State == "go to Position 1")
         {
             State = "go to Position 2";
@@ -40,6 +44,13 @@ public class MovingPlatform : MonoBehaviour
             State = "go to Position 2";
             MovingTo = Point2.position;
         }
+        
+     }
+        else
+        {
+            State = "go to Position 1";
+            MovingTo = Point1.position;
+        }
         Invoke("changeDirection", timeToWait);
     }
 
@@ -47,9 +58,12 @@ public class MovingPlatform : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         other.transform.parent = Platform.transform;
+        isActive = true;
     }
     private void OnTriggerExit(Collider other)
-    {              
-            other.transform.parent = null;       
+    {
+        isActive = false;
+        other.transform.parent = null;
+        Invoke("changeDirection", 3f);
     }
 }

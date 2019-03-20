@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BeamDamage : MonoBehaviour
 {
+    public bool autoDelete;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +14,10 @@ public class BeamDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (autoDelete)
+        {
+            Destroy(this, 0.5f);
+        }
     }
     private void OnTriggerEnter(Collider target)
     {
