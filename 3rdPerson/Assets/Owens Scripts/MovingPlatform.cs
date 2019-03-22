@@ -13,6 +13,7 @@ public class MovingPlatform : MonoBehaviour
     public float timeToWait = 3f;
     public bool isActive;
     public string State;
+    public bool alwaysMoving = false;   // Added by JK
 
     void Start()
     {
@@ -25,27 +26,26 @@ public class MovingPlatform : MonoBehaviour
 
     void changeDirection()
     {
-        if (isActive)
+        if (isActive || alwaysMoving)
         {
 
+            if (State == "go to Position 1")
+            {
+                State = "go to Position 2";
+                MovingTo = Point2.position;
+            }
+            else if (State == "go to Position 2")
+            {
+                State = "go to Position 1";
+                MovingTo = Point1.position;
+            }
+            else if (State == "")
+            {
+                State = "go to Position 2";
+                MovingTo = Point2.position;
+            }
         
-        if (State == "go to Position 1")
-        {
-            State = "go to Position 2";
-            MovingTo = Point2.position;
         }
-        else if (State == "go to Position 2")
-        {
-            State = "go to Position 1";
-            MovingTo = Point1.position;
-        }
-        else if (State == "")
-        {
-            State = "go to Position 2";
-            MovingTo = Point2.position;
-        }
-        
-     }
         else
         {
             State = "go to Position 1";
