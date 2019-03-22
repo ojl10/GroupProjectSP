@@ -65,10 +65,7 @@ public class SwordAttack : AbstractBehaviour
         {
             enemy = other.gameObject;
         }
-        else
-        {
-            enemy = null;
-        }
+
     }
 
     private void OnTriggerExit(Collider other)

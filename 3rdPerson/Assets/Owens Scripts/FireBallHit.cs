@@ -23,7 +23,7 @@ public class FireBallHit : MonoBehaviour
     {
         ThisCollider = GetComponent<Collider>();
         Target = null;
-        GetComponent<Rigidbody>().velocity = this.transform.forward * 15;
+        GetComponent<Rigidbody>().velocity = this.transform.forward * 25;
     }
 
     void Update()
@@ -39,7 +39,7 @@ public class FireBallHit : MonoBehaviour
         if (Target != null)
         {
             transform.LookAt(Target);
-            GetComponent<Rigidbody>().velocity = this.transform.forward * 15;
+            GetComponent<Rigidbody>().velocity = this.transform.forward * 25;
         }
     }
 
