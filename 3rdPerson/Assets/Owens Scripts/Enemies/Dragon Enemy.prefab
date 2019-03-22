@@ -428,7 +428,7 @@ MonoBehaviour:
   respawnPoint: {x: 0, y: 0, z: 0}
   respawnRotation: {x: 0, y: 0, z: 0, w: 0}
   playerLocation: {fileID: 0}
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 11400000, guid: 25186615755e2e5469e0c5d6b16319c9, type: 2}
   ai: {fileID: 541212734}
   isDead: 0
 --- !u!95 &541212731

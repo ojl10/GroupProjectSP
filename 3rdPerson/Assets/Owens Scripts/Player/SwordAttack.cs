@@ -23,7 +23,7 @@ public class SwordAttack : AbstractBehaviour
             canFire = false;
             TimeTillFire = ReloadTime;
 
-            if (enemy != null && enemy.gameObject.GetComponent(typeof(TakeDamager)))
+            if (enemy != null && enemy.gameObject.GetComponent(typeof(TakeDamager))) // if it is an enemy, and has the takedamager interface on it then do following
             {
                 TakeDamager addscores = enemy.gameObject.GetComponent<TakeDamager>(); //if component that touches enemies, call the interface and damage
                 addscores.ITakeDamage(1);

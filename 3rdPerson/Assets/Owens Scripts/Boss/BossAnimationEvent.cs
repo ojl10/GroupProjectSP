@@ -5,29 +5,24 @@ using UnityEngine;
 public class BossAnimationEvent : BossLookAt
 {
     [SerializeField]
-    GameObject weakPoint;
+    GameObject weakPoint; // Boss's damageable point
     [SerializeField]
-    GameObject beamObject;
+    GameObject beamObject; //Chest beam
     [SerializeField]
-    GameObject swipeObject;
+    GameObject swipeObject; // Boss fore arm collider
 
-    public GameObject HandSlamPos;
-    public GameObject HandSlamParticle;
+    public GameObject HandSlamPos; // where to spawn the particle effects
+    public GameObject HandSlamParticle;// particle effects that will damage the player
 
     // Start is called before the first frame update
-    void Start()
+    void Start() // Switch all the objects off untill needed
     {
         swipeObject.SetActive(false);
         beamObject.SetActive(false);
         weakPoint.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    void SlamFloor() //animation event
+    void SlamFloor() //animation event that spawns the particle effects to damage the player
     {
         GameObject HandSlam = Instantiate(HandSlamParticle,
         HandSlamPos.transform.position, HandSlamPos.transform.rotation);

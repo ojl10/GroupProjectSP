@@ -5,14 +5,14 @@ using UnityEngine;
 public class BossLookAt : AbstractBehaviour
 {
     
-    public Transform target;
+    public Transform target; // the player which the boss will look at
     [SerializeField]
-    float SlamCoolDown = 5f;
+    float SlamCoolDown = 5f; // length between hand slams
     [SerializeField]
-    float Timer;
+    float Timer; // timer that will count down from cool down
     public Animator Boss;
     [SerializeField]
-    int AttackCount;
+    int AttackCount; //Keeps track of how many attacks have been called, to compare when to trigger the exhuasted state
     [Range(1,3), SerializeField]
     int Rand;
 
@@ -30,7 +30,7 @@ public class BossLookAt : AbstractBehaviour
         Boss = GetComponent<Animator>();
     }
 
-     public enum BossState
+     public enum BossState // The different states that can be activated
     {
         Idle,
         Slam,
@@ -45,34 +45,34 @@ public class BossLookAt : AbstractBehaviour
     {
        
 
-        if (target != null && Timer > 0)
+        if (target != null && Timer > 0) // checks if we're still counting down from last attack
         {
             // transform.LookAt(target);
             Timer -= Time.deltaTime;
-            if (curBossState != BossState.Exposed)
+            if (curBossState != BossState.Exposed) // if we're not in the exposed state then cary on rotating towards player
             {
                 //thisTransform.LookAt(new Vector3(target.position.x, thisTransform.position.y, target.position.z));
                 Vector3 dir = target.position - transform.position;
                 Quaternion lookRotation = Quaternion.LookRotation(dir);
-                Vector3 rotation = Quaternion.Lerp(thisTransform.rotation, lookRotation, Time.deltaTime * 5).eulerAngles;
+                Vector3 rotation = Quaternion.Lerp(thisTransform.rotation, lookRotation, Time.deltaTime * 4).eulerAngles;
                 thisTransform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
             }
         }
-        else if (target != null && Timer <= 0)
+        else if (target != null && Timer <= 0) // If the timer has elapsed then check the distance, can attack, select a rand number between 1 - 3
         {
             dist = Vector3.Distance(target.position, transform.position);
             canAttack = true;
             Rand = Random.Range(1, 4);
-            if (Rand == 1 && AttackCount <= 3)
-            {     
-                AttackCount++;
-                curBossState = BossState.Slam;
-                BossStateSwitch();
-            }
-            else if (dist <= 16)
-            {      
+            if (dist <= 16)
+            {                     
                 AttackCount++;
                 curBossState = BossState.Swipe;
+                BossStateSwitch();
+            }
+            else if (Rand == 1 && AttackCount <= 3)
+            {
+                AttackCount++;
+                curBossState = BossState.Slam;
                 BossStateSwitch();
             }
             else if (Rand == 3 && AttackCount <= 3)
@@ -81,7 +81,7 @@ public class BossLookAt : AbstractBehaviour
                 curBossState = BossState.Beam;
                 BossStateSwitch();
             }
-            else if (AttackCount >= 4)
+            else if (AttackCount >= 4) // after x ammount of attacks then expose
             {
                 curBossState = BossState.Exposed;
                 BossStateSwitch();
@@ -89,7 +89,7 @@ public class BossLookAt : AbstractBehaviour
         }
     }
 
-    void BossStateSwitch()
+    void BossStateSwitch() // Boss State Switch
     {
         switch (curBossState)
         {
@@ -99,7 +99,7 @@ public class BossLookAt : AbstractBehaviour
                     curBossState = BossState.Idle;
                 }
                 break;
-            case BossState.Slam:
+            case BossState.Slam: 
                 if (target != null && canAttack)
                     Boss.SetTrigger("Slam");
                     Debug.Log("Slam");
@@ -126,7 +126,7 @@ public class BossLookAt : AbstractBehaviour
                 break;
             case BossState.Exposed:
                 if (AttackCount >= 4 )
-                    Boss.SetTrigger("Exposed");  
+                    Boss.SetTrigger("Exposed");
                     Debug.Log("Exposed");
                     canAttack = false;
                     SlamCoolDown = 7.5f;
