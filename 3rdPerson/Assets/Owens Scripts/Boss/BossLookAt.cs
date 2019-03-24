@@ -63,7 +63,7 @@ public class BossLookAt : AbstractBehaviour
             dist = Vector3.Distance(target.position, transform.position);
             canAttack = true;
             Rand = Random.Range(1, 4);
-            if (dist <= 16)
+            if (dist <= 16 && AttackCount <= 3)
             {                     
                 AttackCount++;
                 curBossState = BossState.Swipe;

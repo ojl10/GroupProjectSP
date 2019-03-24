@@ -14,7 +14,7 @@ public class LavaEvent : MonoBehaviour
     bool lavaRose; //could be used to detect when finished
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (OwensBossHealth.Value <= 0 && lavaRising)
         {
@@ -27,7 +27,6 @@ public class LavaEvent : MonoBehaviour
         }
         
     }
-
 
     private void ResetLavaRun()
     {

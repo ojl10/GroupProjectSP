@@ -26,7 +26,7 @@ public class GeneralSettings
 [System.Serializable]
 public class MovementSettings
 {
-    public float movementSpeed = 8f;                                    //The speed the character moves around.
+    public float movementSpeed = 12f;                                    //The speed the character moves around.
     public Vector3 movementDirection = Vector3.zero;                    //This variable is used to input the direction the character will move.
     [Range(0, 1)] public float groundedVelocityInfluence = 1f;          //Velocity influence changes the strength of the force and how quickly it will affect the current movement.
     [Range(0, 1)] public float airVelocityInfluence = 0.5f;             //Grounded and Air allows for different movement influence depending on the state of the character.
@@ -346,6 +346,7 @@ public class CharacterMotor : AbstractBehaviour
     /// </summary>
     void Movement()
     {
+        movement.movementSpeed = 12f;
         //Checks if the velocityMovement variable is active and if there is no movement input the character will retain its velocity.
         if (movement.velocityMovement && movement.movementDirection == Vector3.zero)
         {

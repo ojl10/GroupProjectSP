@@ -116,6 +116,7 @@
     <Compile Include="Assets\Owens Scripts\ScriptableObjects\PersistableSO.cs" />
     <Compile Include="Assets\Owens Scripts\ScriptableObjects\PosScriptable.cs" />
     <Compile Include="Assets\Owens Scripts\UITEXT.cs" />
+    <Compile Include="Assets\Owens Scripts\World Objects\FallingSpike.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\3D Adventure Game Kit\Assets\Shader\Diffuse Transparency.shader" />
