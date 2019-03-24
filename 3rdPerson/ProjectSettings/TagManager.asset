@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Hookable
   - PuzzlePiece
+  - Hook
   layers:
   - Default
   - TransparentFX

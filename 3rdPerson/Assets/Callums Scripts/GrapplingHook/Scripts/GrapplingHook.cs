@@ -8,6 +8,7 @@ public class GrapplingHook : MonoBehaviour
 
     public GameObject hook;
     public GameObject hookHolder;
+    //public Transform hookrotation;
 
     public float hookTravelSpeed;
     public float playerTravelSpeed;
@@ -21,11 +22,16 @@ public class GrapplingHook : MonoBehaviour
 
     private bool grounded;
 
+    public Camera MCam;
+
 
     void Update()
     {
+
+       
+
         // firing the hook
-        if (Input.GetMouseButtonDown(0) && fired == false)
+        if (Input.GetMouseButtonDown(1) && fired == false)
             fired = true;
 
         if(fired)
@@ -34,6 +40,11 @@ public class GrapplingHook : MonoBehaviour
             rope.SetVertexCount(2);
             rope.SetPosition(0, hookHolder.transform.position);
             rope.SetPosition(1, hook.transform.position);
+        }
+
+        else
+        {
+            hook.transform.rotation = MCam.transform.rotation;
         }
 
         if (fired == true && hooked == false)
