@@ -346,7 +346,15 @@ public class CharacterMotor : AbstractBehaviour
     /// </summary>
     void Movement()
     {
-        movement.movementSpeed = 12f;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            movement.movementSpeed = 12f;
+        }
+        else
+        {
+            movement.movementSpeed = 8f;
+        }
+        
         //Checks if the velocityMovement variable is active and if there is no movement input the character will retain its velocity.
         if (movement.velocityMovement && movement.movementDirection == Vector3.zero)
         {
