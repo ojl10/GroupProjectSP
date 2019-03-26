@@ -228,12 +228,12 @@ GameObject:
   - component: {fileID: 541212739}
   - component: {fileID: 541212738}
   - component: {fileID: 541212737}
-  - component: {fileID: 541212736}
   - component: {fileID: 541212735}
   - component: {fileID: 541212734}
   - component: {fileID: 541212733}
   - component: {fileID: 541212732}
   - component: {fileID: 541212731}
+  - component: {fileID: 852698434431806738}
   m_Layer: 2
   m_Name: Dragon Enemy
   m_TagString: Enemy
@@ -286,20 +286,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &541212736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541212730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 539215a19d7cd324b9b3898f0da7af74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyHealth: {fileID: 0}
-  Ehealth: {fileID: 541212732}
 --- !u!114 &541212735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,6 +436,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &852698434431806738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541212730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539215a19d7cd324b9b3898f0da7af74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyHealth: {fileID: 0}
+  Ehealth: {fileID: 541212732}
 --- !u!1 &564950375
 GameObject:
   m_ObjectHideFlags: 0
