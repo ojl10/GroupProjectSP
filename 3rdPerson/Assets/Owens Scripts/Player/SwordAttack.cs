@@ -9,7 +9,7 @@ public class SwordAttack : AbstractBehaviour
     [SerializeField]
     float TimeTillFire;
     [SerializeField]
-    float ReloadTime = 0.3f;
+    float ReloadTime = 0.5f;
     [SerializeField]
     bool canFire;
     EnemyAI EAI;
@@ -19,6 +19,7 @@ public class SwordAttack : AbstractBehaviour
     {
         if (Input.GetMouseButtonDown(0) && canFire)//Plays the attack Anim
         {
+            m_Animator.SetInteger("AttackNum",Random.Range(1,4));
             m_Animator.SetTrigger("PAttack");
             canFire = false;
             TimeTillFire = ReloadTime;
