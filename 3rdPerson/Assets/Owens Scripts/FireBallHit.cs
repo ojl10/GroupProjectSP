@@ -48,13 +48,14 @@ public class FireBallHit : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy" || collision.gameObject.GetComponent(typeof(TakeDamager)))
         {
+            ThisCollider.enabled = !ThisCollider.enabled;
             EnemyHit.Play();
             TakeDamager addscores = collision.gameObject.GetComponent<TakeDamager>(); //if component that touches enemies, call the interface and damage     
             addscores.ITakeDamage(1);
-            ThisCollider.enabled = !ThisCollider.enabled;
+            
             Destroy(this.gameObject, 0.3f);
         }
-        else if  (collision.gameObject.tag != "Player")
+        else if  (collision.gameObject.tag != "Player" && collision.gameObject.tag != "Enemy")
         {
             NonEnemyHit.Play();
             Destroy(gameObject, 0.3f);

@@ -28,6 +28,8 @@ public class TakeDamager : MonoBehaviour, Damageable
     // Start is called before the first frame update
     void Start()
     {
+       
+
         if (EnemyHealth != null)
         {
             EnemyHealth.Value = EnemyHealth.MaxValue;
