@@ -6,13 +6,7 @@ public class SwordAttack : AbstractBehaviour
 {
     [SerializeField]
     GameObject enemy = null;
-    [SerializeField]
-    float TimeTillFire;
-    [SerializeField]
-    float ReloadTime = 0.5f;
-    [SerializeField]
-    bool canFire;
-    EnemyAI EAI;
+
 
     public AudioClip Swordhit;
     AudioSource audioSource;
@@ -22,27 +16,18 @@ public class SwordAttack : AbstractBehaviour
         audioSource = GetComponent<AudioSource>();
     }   
 
-        // Update is called once per frame
-        void Update()
-    {
-        if (Input.GetMouseButtonDown(0) && canFire)//Plays the attack Anim
+    private void OnTriggerEnter(Collider other)
+{
+        if (other.gameObject.tag == "Enemy")
         {
-            m_Animator.SetInteger("AttackNum",Random.Range(1,4));
-            m_Animator.SetTrigger("PAttack");
-            canFire = false;
-            TimeTillFire = ReloadTime;
+            enemy = other.gameObject;
 
             if (enemy != null && enemy.gameObject.GetComponent(typeof(TakeDamager))) // if it is an enemy, and has the takedamager interface on it then do following
             {
                 TakeDamager addscores = enemy.gameObject.GetComponent<TakeDamager>(); //if component that touches enemies, call the interface and damage
                 addscores.ITakeDamage(1);
-                audioSource.PlayOneShot(Swordhit, 0.7F);
-                if (enemy.gameObject.GetComponent<EnemyAI>())
-                {
-                    EAI = enemy.gameObject.GetComponent<EnemyAI>();
-                    EAI.TakenHit(); 
-                }
-                //audio here
+                audioSource.PlayOneShot(Swordhit, 0.7F);//audio here
+                this.enabled = false;
             }
             else
             {
@@ -50,36 +35,11 @@ public class SwordAttack : AbstractBehaviour
                 //not enemy audio
             }
         }
-        else
-        {
-            //null
-        }
-
-
-
-         if (!canFire && TimeTillFire >= 0)
-        {
-            TimeTillFire -= Time.deltaTime;
-        }
-        if (TimeTillFire <= 0)
-        {
-            canFire = true;
-        }
-
-    }
-    
-
-    private void OnTriggerEnter(Collider other)
-{
-        if (other.gameObject.tag == "Enemy")
-        {
-            enemy = other.gameObject;
-        }
 
     }
 
     private void OnTriggerExit(Collider other)
     {
-        enemy = null;
+ //
     }
 }

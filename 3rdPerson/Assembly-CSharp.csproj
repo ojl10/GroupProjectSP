@@ -108,7 +108,9 @@
     <Compile Include="Assets\Owens Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Owens Scripts\OwensCollectable.cs" />
     <Compile Include="Assets\Owens Scripts\Player\AnimationEventHandler.cs" />
+    <Compile Include="Assets\Owens Scripts\Player\AOE.cs" />
     <Compile Include="Assets\Owens Scripts\Player\SwordAttack.cs" />
+    <Compile Include="Assets\Owens Scripts\Player\SwordEnable.cs" />
     <Compile Include="Assets\Owens Scripts\PuzzleInteractObj.cs" />
     <Compile Include="Assets\Owens Scripts\PuzzleObject.cs" />
     <Compile Include="Assets\Owens Scripts\ScriptableObjects\CheckpointUpdate.cs" />

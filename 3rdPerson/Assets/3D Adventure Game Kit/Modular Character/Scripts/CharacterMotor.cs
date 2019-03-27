@@ -220,7 +220,7 @@ public class CharacterMotor : AbstractBehaviour
         //When the ray collides with an object with the same layer as defined in the wallLayerMask the bool is set to true or false, the hit data is also transferred to the wallHit variable.
         if (Physics.Raycast(ray, out collision.wallHit, collision.wallRayDistance, collision.wallLayerMask))
         {
-            collision.wallCollision = true;
+            collision.wallCollision = true;  
         }
         else
         {

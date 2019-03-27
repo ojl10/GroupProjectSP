@@ -86,7 +86,7 @@ public class CameraControl : MonoBehaviour {
     /// Finds the target, Initializes the collision handler of the camera and sets up the clip points and moves the camera to the target.
     /// </summary>
     void Start()
-    {
+    {     
         FindTarget();
         collision.Initialize(Camera.main);
         collision.UpdateCameraClipPoints(transform.position, transform.rotation, ref collision.adjustedCameraClipPoints);
@@ -142,44 +142,43 @@ public class CameraControl : MonoBehaviour {
     /// </summary>
     void MoveToTarget()
     {
-        //Checks the offset
-        targetPos = target.position + position.targetPosOffest;
+            //Checks the offset
+            targetPos = target.position + position.targetPosOffest;
 
-        //Calculates the destination using orbit and distance variables.
-        destination = Quaternion.Euler(orbit.vRotation, orbit.hRotation, 0) * -Vector3.forward * position.distanceFromTarget;
-        destination += targetPos;
-        //If the camera is colliding with anything
-        if (collision.colliding)
-        {
-            //Calculate destination using adjusted values.
-            adjustedDestination = Quaternion.Euler(orbit.vRotation, orbit.hRotation, 0) * Vector3.forward * collision.GetAdjustedDistanceWithRayFrom(targetPos);
-            adjustedDestination += targetPos;
-
-            if (position.smoothFollow)
+            //Calculates the destination using orbit and distance variables.
+            destination = Quaternion.Euler(orbit.vRotation, orbit.hRotation, 0) * -Vector3.forward * position.distanceFromTarget;
+            destination += targetPos;
+            //If the camera is colliding with anything
+            if (collision.colliding)
             {
-                //Smooth Damp the following.
-                transform.position = Vector3.SmoothDamp(transform.position, adjustedDestination, ref camVel, position.smooth);
+                //Calculate destination using adjusted values.
+                adjustedDestination = Quaternion.Euler(orbit.vRotation, orbit.hRotation, 0) * Vector3.forward * collision.GetAdjustedDistanceWithRayFrom(targetPos);
+                adjustedDestination += targetPos;
+
+                if (position.smoothFollow)
+                {
+                    //Smooth Damp the following.
+                    transform.position = Vector3.SmoothDamp(transform.position, adjustedDestination, ref camVel, position.smooth);
+                }
+                else
+                {
+                    //Position uses adjustedDestination.
+                    transform.position = adjustedDestination;
+                }
             }
             else
             {
-                //Position uses adjustedDestination.
-                transform.position = adjustedDestination;
-            }
-         }
-        else
-        {
-            if (position.smoothFollow)
-            {
-                //Smooth Damp the following.
-                transform.position = Vector3.SmoothDamp(transform.position, destination, ref camVel, position.smooth);
-            }
-            else
-            {
-                //Position used destination.
-                transform.position = destination;
-            }
-        }
-
+                if (position.smoothFollow)
+                {
+                    //Smooth Damp the following.
+                    transform.position = Vector3.SmoothDamp(transform.position, destination, ref camVel, position.smooth);
+                }
+                else
+                {
+                    //Position used destination.
+                    transform.position = destination;
+                }
+            }     
     }
 
     /// <summary>
@@ -249,26 +248,28 @@ public class CameraControl : MonoBehaviour {
     /// </summary>
     void ZoomInOnTarget()
     {
-        //Change how the camera zooms based on input type
-        if (input.current.type == InputManager.ControlType.Keyboard)
-        {
-            position.distanceFromTarget += input.current.scrollInput * position.zoomSpeed * Time.deltaTime;
-        }
-        else
-        {
-            position.distanceFromTarget += input.current.cameraV * position.zoomSpeed / 200 * Time.deltaTime;
-        }
 
-        //Cap the zoom using max and min values.
-        if (position.distanceFromTarget > position.maxZoom)
-        {
-            position.distanceFromTarget = position.maxZoom;
-        }
+            //Change how the camera zooms based on input type
+            if (input.current.type == InputManager.ControlType.Keyboard)
+            {
+                position.distanceFromTarget += input.current.scrollInput * position.zoomSpeed * Time.deltaTime;
+            }
+            else
+            {
+                position.distanceFromTarget += input.current.cameraV * position.zoomSpeed / 200 * Time.deltaTime;
+            }
+
+            //Cap the zoom using max and min values.
+            if (position.distanceFromTarget > position.maxZoom)
+            {
+                position.distanceFromTarget = position.maxZoom;
+            }
 
         if (position.distanceFromTarget < position.minZoom)
         {
             position.distanceFromTarget = position.minZoom;
         }
+
 
     }
 

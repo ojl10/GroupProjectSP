@@ -30,12 +30,16 @@ public class Health : AbstractBehaviour {
     /// </summary>
     public virtual void Start()
     {
-        respawnPoint.x = playerLocation.X;//Owen
-        respawnPoint.y = playerLocation.Y;//Owen
-        respawnPoint.z = playerLocation.Z;//Owen
-        transform.position = respawnPoint;//Owen
-        //respawnPoint = transform.position;
-        respawnRotation = transform.rotation;
+        if (this.gameObject.tag == "Player")
+        {
+            respawnPoint.x = playerLocation.X;//Owen
+            respawnPoint.y = playerLocation.Y;//Owen
+            respawnPoint.z = playerLocation.Z;//Owen
+            transform.position = respawnPoint;//Owen
+                                              //respawnPoint = transform.position;
+            respawnRotation = transform.rotation;
+        }
+
         
     }
 
