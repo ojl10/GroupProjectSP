@@ -14,8 +14,16 @@ public class SwordAttack : AbstractBehaviour
     bool canFire;
     EnemyAI EAI;
 
-    // Update is called once per frame
-    void Update()
+    public AudioClip Swordhit;
+    AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }   
+
+        // Update is called once per frame
+        void Update()
     {
         if (Input.GetMouseButtonDown(0) && canFire)//Plays the attack Anim
         {
@@ -28,6 +36,7 @@ public class SwordAttack : AbstractBehaviour
             {
                 TakeDamager addscores = enemy.gameObject.GetComponent<TakeDamager>(); //if component that touches enemies, call the interface and damage
                 addscores.ITakeDamage(1);
+                audioSource.PlayOneShot(Swordhit, 0.7F);
                 if (enemy.gameObject.GetComponent<EnemyAI>())
                 {
                     EAI = enemy.gameObject.GetComponent<EnemyAI>();
