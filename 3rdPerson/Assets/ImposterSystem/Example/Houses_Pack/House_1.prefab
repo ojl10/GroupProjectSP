@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &112938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 464380}
+  - component: {fileID: 11406754}
+  m_Layer: 0
+  m_Name: House_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &464380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112938}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
+  m_LocalPosition: {x: -4204, y: 0, z: -4278}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 463148}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &11406754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb90b73b068de2749bd1c151171007dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _isStatic: 1
+  _transform: {fileID: 464380}
+  _center: {x: -0.76953125, y: 10.895566, z: 2.3242188}
+  _size: {x: 32.970047, y: 21.876938, z: 33.441246}
+  _quadSize: 46.961056
+  m_LODs:
+  - screenRelativeTransitionHeight: 0.20084836
+    fadeTransitionWidth: 0
+    isImposter: 0
+    renderShadows: 0
+    minImposterResolution: 32
+    maxImposterResolution: 512
+    renderers:
+    - {fileID: 11414104}
+  - screenRelativeTransitionHeight: 0.005747449
+    fadeTransitionWidth: 0
+    isImposter: 1
+    renderShadows: 1
+    minImposterResolution: 32
+    maxImposterResolution: 512
+    renderers:
+    - {fileID: 11414104}
+  alwaysLookAtCamera: 1
+  updateBehavior: 1
+  errorCameraAngle: 1
+  useErrorLightAngle: 1
+  errorLightAngle: 3
+  errorDistance: 0.15
+  ZOffset: 0.5
+  useUpdateByTime: 0
+  timeInterval: 1
+  _change: 0
+  _angle: 0
+  _originObjects:
+  - {fileID: 11414104}
+  _imposters: []
+  _shadowCaster: {fileID: 0}
+  debugDistanceDelta: 0
+--- !u!1 &141490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 463148}
+  - component: {fileID: 3384400}
+  - component: {fileID: 2368038}
+  - component: {fileID: 11414104}
+  m_Layer: 0
+  m_Name: House_1_lod_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &463148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141490}
+  m_LocalRotation: {x: 0.000000021855694, y: 0.00000017484555, z: -3.821371e-15, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 464380}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3384400
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141490}
+  m_Mesh: {fileID: 4300002, guid: 28d592096e7e76148945c98658a6c011, type: 3}
+--- !u!23 &2368038
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141490}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e2a35b1a2c48aae40896529381c37ae4, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &11414104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a77edcbfde815e347a11ba7e390ea626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  simplifyRendererOnRenderToImposter: 0
+  Renderer: {fileID: 2368038}
+  _defLayer: 0
