@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8094636366195495600}
   - component: {fileID: 6574508935916154732}
   - component: {fileID: 2198919102645841716}
+  - component: {fileID: 8641864991138820945}
   m_Layer: 0
   m_Name: Hookable Collider
   m_TagString: Hookable
@@ -53,3 +54,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!122 &8641864991138820945
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5105551444729265123}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278249208
+  m_Size: 2
