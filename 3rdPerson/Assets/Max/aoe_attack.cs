@@ -6,9 +6,11 @@ public class aoe_attack : MonoBehaviour
 {
     public GameObject aoeObject;
 
+    public GameObject effect;
+
     public float delay = 5f;
 
-    public float sec = 1f;
+    public float lifetime = 1f;
 
     float uptime;
 
@@ -23,7 +25,7 @@ public class aoe_attack : MonoBehaviour
 
         aoeObject.SetActive(false);
 
-        uptime = sec;
+        uptime = lifetime;
 
         canhit = true;
     }
@@ -45,7 +47,7 @@ public class aoe_attack : MonoBehaviour
         if (uptime <= 0f)
         {
             aoeObject.SetActive(false);
-            uptime = sec;
+            uptime = lifetime;
             canhit = false;
         }
 
